@@ -1,0 +1,9 @@
+[
+  {
+    "cwd": "$ZED_WORKTREE_ROOT/day4",
+    "label": "Test Day 4",
+    "command": "swift",
+    "args": ["test"],
+    "use_new_terminal": false,
+  },
+]

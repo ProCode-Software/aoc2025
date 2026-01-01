@@ -1,0 +1,13 @@
+[
+  {
+    "adapter": "Swift",
+    "label": "Run Day 4",
+    "program": "$ZED_WORKTREE_ROOT/day4/.build/debug/Day4",
+     "request": "launch",
+    "build": {
+      "command": "swift",
+      "args": ["build"],
+      "cwd": "$ZED_WORKTREE_ROOT/day4"
+    },
+  },
+]

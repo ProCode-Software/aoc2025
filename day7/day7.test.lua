@@ -1,0 +1,43 @@
+local lu = require('luaunit')
+local day7 = require('day7')
+
+--- @param s string
+function split(s, pat)
+    local t = {}
+    while true do
+        local index = string.find(s, pat)
+        if index == nil then
+            table.insert(t, s)
+            return t
+        end
+        local sub = string.sub(s, 1, index - 1)
+        table.insert(t, sub)
+        s = string.sub(s, index + 1)
+    end
+end
+
+local exampleString = [[.......S.......
+...............
+.......^.......
+...............
+......^.^......
+...............
+.....^.^.^.....
+...............
+....^.^...^....
+...............
+...^.^...^.^...
+...............
+..^...^.....^..
+...............
+.^.^.^.^.^...^.
+...............]]
+
+local example = split(exampleString, "\n")
+
+
+function TestPart1()
+    lu.assertEquals(day7.part1(example), 21)
+end
+
+os.exit(lu.LuaUnit.run())
